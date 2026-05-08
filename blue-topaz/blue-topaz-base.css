@@ -58,6 +58,8 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
   --bt-code-punctuation: var(--bt-muted);
   --bt-code-meta: var(--bt-muted);
   --bt-code-shell-option: var(--bt-code-property);
+  --bt-code-variable: var(--bt-code-block-text);
+  --bt-code-function: var(--bt-code-property);
 }
 
 html,
@@ -414,11 +416,15 @@ pre .token.comment {
 }
 
 .md-fences .cm-keyword,
+.md-fences .cm-atom.cm-keyword,
 .md-fences .cm-builtin,
+.md-fences .token.atrule,
 .md-fences .token.keyword,
 .md-fences .token.builtin,
 pre .cm-keyword,
+pre .cm-atom.cm-keyword,
 pre .cm-builtin,
+pre .token.atrule,
 pre .token.keyword,
 pre .token.builtin {
   color: var(--bt-code-keyword);
@@ -448,11 +454,15 @@ pre .token.boolean {
 .md-fences .cm-property,
 .md-fences .cm-attribute,
 .md-fences .cm-qualifier,
+.md-fences .cm-type,
+.md-fences .token.selector,
 .md-fences .token.property,
 .md-fences .token.attr-name,
 pre .cm-property,
 pre .cm-attribute,
 pre .cm-qualifier,
+pre .cm-type,
+pre .token.selector,
 pre .token.property,
 pre .token.attr-name {
   color: var(--bt-code-property);
@@ -463,6 +473,24 @@ pre .token.attr-name {
 pre .cm-tag,
 pre .token.tag {
   color: var(--bt-code-tag);
+}
+
+.md-fences .cm-variable,
+.md-fences .cm-variable-2,
+.md-fences .cm-variable-3,
+.md-fences .token.variable,
+pre .cm-variable,
+pre .cm-variable-2,
+pre .cm-variable-3,
+pre .token.variable {
+  color: var(--bt-code-variable);
+}
+
+.md-fences .cm-def,
+.md-fences .token.function,
+pre .cm-def,
+pre .token.function {
+  color: var(--bt-code-function);
 }
 
 .md-fences .cm-operator,
@@ -482,22 +510,9 @@ pre .token.punctuation {
 }
 
 .md-fences .cm-meta,
-.md-fences .token.function,
 pre .cm-meta,
-pre .token.function {
+pre .cm-meta {
   color: var(--bt-code-meta);
-}
-
-.md-fences[lang="shell"] .cm-keyword,
-.md-fences[lang="bash"] .cm-keyword,
-.md-fences[lang="sh"] .cm-keyword,
-.md-fences[lang="zsh"] .cm-keyword,
-pre[lang="shell"] .cm-keyword,
-pre[lang="bash"] .cm-keyword,
-pre[lang="sh"] .cm-keyword,
-pre[lang="zsh"] .cm-keyword {
-  color: var(--bt-code-block-text);
-  font-weight: 600;
 }
 
 .md-fences[lang="shell"] .cm-operator,
