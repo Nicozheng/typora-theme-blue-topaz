@@ -12,6 +12,10 @@ Thumbs.db
 .cache/
 tmp/
 temp/
+.superpowers/
+
+# Local upstream reference checkout
+Blue-Topaz_Obsidian-css/
 
 # Local environment files
 .env
