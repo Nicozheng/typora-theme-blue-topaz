@@ -15,9 +15,9 @@ The themes should prioritize the writing pane and Markdown document rendering. O
 
 Reference sources:
 
-- `Blue-Topaz_Obsidian-css/theme.css` and `Blue-Topaz_Obsidian-css/obsidian.css` for Blue Topaz variables, typography, and colors.
-- `style-settings.json` for the user's Blue Topaz customization.
-- `example_theme/bluetex.css` and `example_theme/bluetex-nonum.css` for Typora selector patterns and bundled font usage.
+- `resources/Blue-Topaz_Obsidian-css/theme.css` and `resources/Blue-Topaz_Obsidian-css/obsidian.css` for Blue Topaz variables, typography, and colors.
+- `resources/style-settings.json` for the user's Blue Topaz customization.
+- `resources/example_theme/bluetex.css` and `resources/example_theme/bluetex-nonum.css` for Typora selector patterns and bundled font usage.
 
 User customization to apply to all four themes:
 

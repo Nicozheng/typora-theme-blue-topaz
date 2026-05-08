@@ -17,7 +17,7 @@
 - Create `blue-topaz-nonum.css`: light non-numbered public Typora theme entrypoint.
 - Create `blue-topaz-dark.css`: dark numbered public Typora theme entrypoint.
 - Create `blue-topaz-dark-nonum.css`: dark non-numbered public Typora theme entrypoint.
-- Copy font assets from `example_theme/blueTex/` into `blue-topaz/`.
+- Copy font assets from `resources/example_theme/blueTex/` into `blue-topaz/`.
 - Create `preview/blue-topaz-preview.html`: static verification page with four render panes.
 - Create `preview/blue-topaz-preview.css`: preview-only layout CSS that imports the four theme files into scoped panes.
 
@@ -35,10 +35,10 @@ Run:
 
 ```bash
 mkdir -p blue-topaz
-cp example_theme/blueTex/Bookerly-Regular.ttf blue-topaz/Bookerly-Regular.ttf
-cp example_theme/blueTex/PingFangSC-Regular.otf blue-topaz/PingFangSC-Regular.otf
-cp example_theme/blueTex/CascadiaCode.woff2 blue-topaz/CascadiaCode.woff2
-cp example_theme/blueTex/MapleMono-NF-CN-Regular.woff2 blue-topaz/MapleMono-NF-CN-Regular.woff2
+cp resources/example_theme/blueTex/Bookerly-Regular.ttf blue-topaz/Bookerly-Regular.ttf
+cp resources/example_theme/blueTex/PingFangSC-Regular.otf blue-topaz/PingFangSC-Regular.otf
+cp resources/example_theme/blueTex/CascadiaCode.woff2 blue-topaz/CascadiaCode.woff2
+cp resources/example_theme/blueTex/MapleMono-NF-CN-Regular.woff2 blue-topaz/MapleMono-NF-CN-Regular.woff2
 ```
 
 Expected: the four files exist under `blue-topaz/`.

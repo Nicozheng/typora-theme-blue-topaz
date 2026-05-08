@@ -47,6 +47,17 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
   --bt-h2-number: counter(bt-h2) ". ";
   --bt-h3-number: counter(bt-h2) "." counter(bt-h3) " ";
   --bt-h4-number: counter(bt-h2) "." counter(bt-h3) "." counter(bt-h4) " ";
+  --bt-code-line-number: var(--bt-muted);
+  --bt-code-comment: #6a737d;
+  --bt-code-keyword: var(--bt-accent);
+  --bt-code-string: #519A00;
+  --bt-code-number: #B166EC;
+  --bt-code-property: var(--bt-accent);
+  --bt-code-tag: #F25F5F;
+  --bt-code-operator: var(--bt-muted);
+  --bt-code-punctuation: var(--bt-muted);
+  --bt-code-meta: var(--bt-muted);
+  --bt-code-shell-option: var(--bt-code-property);
 }
 
 html,
@@ -366,6 +377,12 @@ pre,
   line-height: 1.45;
 }
 
+pre,
+.md-fences,
+.CodeMirror {
+  scrollbar-color: var(--bt-border) transparent;
+}
+
 pre code,
 .md-fences code {
   padding: 0;
@@ -374,6 +391,124 @@ pre code,
   background: transparent;
   color: inherit;
   font-size: 0.9rem;
+}
+
+.md-fences .CodeMirror-gutters,
+.md-fences .CodeMirror-linenumber,
+.CodeMirror-gutters,
+.CodeMirror-linenumber,
+.cm-gutters,
+.cm-lineNumbers,
+.cm-lineNumbers .cm-gutterElement,
+.live-preview-codeblock-line-nums {
+  background: transparent;
+  color: var(--bt-code-line-number);
+  font-family: var(--bt-font-code);
+}
+
+.md-fences .cm-comment,
+.md-fences .token.comment,
+pre .cm-comment,
+pre .token.comment {
+  color: var(--bt-code-comment);
+}
+
+.md-fences .cm-keyword,
+.md-fences .cm-builtin,
+.md-fences .token.keyword,
+.md-fences .token.builtin,
+pre .cm-keyword,
+pre .cm-builtin,
+pre .token.keyword,
+pre .token.builtin {
+  color: var(--bt-code-keyword);
+  font-weight: 600;
+}
+
+.md-fences .cm-string,
+.md-fences .cm-string-2,
+.md-fences .token.string,
+pre .cm-string,
+pre .cm-string-2,
+pre .token.string {
+  color: var(--bt-code-string);
+}
+
+.md-fences .cm-number,
+.md-fences .cm-atom,
+.md-fences .token.number,
+.md-fences .token.boolean,
+pre .cm-number,
+pre .cm-atom,
+pre .token.number,
+pre .token.boolean {
+  color: var(--bt-code-number);
+}
+
+.md-fences .cm-property,
+.md-fences .cm-attribute,
+.md-fences .cm-qualifier,
+.md-fences .token.property,
+.md-fences .token.attr-name,
+pre .cm-property,
+pre .cm-attribute,
+pre .cm-qualifier,
+pre .token.property,
+pre .token.attr-name {
+  color: var(--bt-code-property);
+}
+
+.md-fences .cm-tag,
+.md-fences .token.tag,
+pre .cm-tag,
+pre .token.tag {
+  color: var(--bt-code-tag);
+}
+
+.md-fences .cm-operator,
+.md-fences .token.operator,
+pre .cm-operator,
+pre .token.operator {
+  color: var(--bt-code-operator);
+}
+
+.md-fences .cm-punctuation,
+.md-fences .cm-bracket,
+.md-fences .token.punctuation,
+pre .cm-punctuation,
+pre .cm-bracket,
+pre .token.punctuation {
+  color: var(--bt-code-punctuation);
+}
+
+.md-fences .cm-meta,
+.md-fences .token.function,
+pre .cm-meta,
+pre .token.function {
+  color: var(--bt-code-meta);
+}
+
+.md-fences[lang="shell"] .cm-keyword,
+.md-fences[lang="bash"] .cm-keyword,
+.md-fences[lang="sh"] .cm-keyword,
+.md-fences[lang="zsh"] .cm-keyword,
+pre[lang="shell"] .cm-keyword,
+pre[lang="bash"] .cm-keyword,
+pre[lang="sh"] .cm-keyword,
+pre[lang="zsh"] .cm-keyword {
+  color: var(--bt-code-block-text);
+  font-weight: 600;
+}
+
+.md-fences[lang="shell"] .cm-operator,
+.md-fences[lang="bash"] .cm-operator,
+.md-fences[lang="sh"] .cm-operator,
+.md-fences[lang="zsh"] .cm-operator,
+pre[lang="shell"] .cm-operator,
+pre[lang="bash"] .cm-operator,
+pre[lang="sh"] .cm-operator,
+pre[lang="zsh"] .cm-operator {
+  color: var(--bt-code-shell-option);
 }
 
 img {

@@ -16,6 +16,7 @@ temp/
 
 # Local upstream reference checkout
 Blue-Topaz_Obsidian-css/
+resources/
 
 # Local environment files
 .env
