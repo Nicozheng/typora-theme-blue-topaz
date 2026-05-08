@@ -1,0 +1,19 @@
+{
+  "blue-topaz-theme@@color-scheme-options": "color-scheme-options-default",
+  "blue-topaz-theme@@accent-strong@@light": "#F25F5F",
+  "blue-topaz-theme@@accent-strong@@dark": "#F25F5F",
+  "blue-topaz-theme@@accent-em@@light": "#519A00",
+  "blue-topaz-theme@@accent-em@@dark": "#519A00",
+  "blue-topaz-theme@@strong-em-color-1@@light": "#B166EC",
+  "blue-topaz-theme@@strong-em-color-1@@dark": "#B166EC",
+  "blue-topaz-theme@@font-family-strong": "Bookerly,'Inter', 'Segoe UI','霞鹜文楷 GB', 'LXGW WenKai', 'Segoe UI Emoji',var(--font-interface)",
+  "blue-topaz-theme@@line-height-main": 1.5,
+  "blue-topaz-theme@@retain-header-color": true,
+  "blue-topaz-theme@@remove-heading-indicator": true,
+  "blue-topaz-theme@@strong-em-color-2@@light": "#B166EC",
+  "blue-topaz-theme@@strong-em-color-2@@dark": "#B166EC",
+  "blue-topaz-theme@@font-family-em": "Bookerly,'Inter', 'Segoe UI','霞鹜文楷 GB', 'LXGW WenKai', 'Segoe UI Emoji',var(--font-interface)",
+  "blue-topaz-theme@@bottom-padding-value": "10em",
+  "blue-topaz-theme@@stack-tabs-background-blur-depth": 90,
+  "Blue-Topaz-Codebox-Highlight@@code-theme-selection": "code-theme-bt-default"
+}

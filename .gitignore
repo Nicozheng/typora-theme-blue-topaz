@@ -1,0 +1,23 @@
+.DS_Store
+Thumbs.db
+
+# Local editor and OS noise
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs and caches
+*.log
+.cache/
+tmp/
+temp/
+
+# Local environment files
+.env
+.env.*
+
+# Build/dependency directories
+node_modules/
+dist/
+build/
