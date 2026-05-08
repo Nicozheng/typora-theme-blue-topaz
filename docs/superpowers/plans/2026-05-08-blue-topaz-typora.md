@@ -180,7 +180,7 @@ Write `blue-topaz.css`:
 
 - [ ] **Step 2: Create light non-numbered entrypoint**
 
-Write `blue-topaz-nonum.css` using the same light variables as `blue-topaz.css`, but set:
+Write `blue-topaz-nonum.css` using the *same* light variables as `blue-topaz.css`, but set:
 
 ```css
 --bt-number-headings: none;
