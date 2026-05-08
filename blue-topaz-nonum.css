@@ -1,0 +1,54 @@
+/*
+Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/PKM-er/Blue-Topaz_Obsidian-css), and I would like to express my appreciation to WhyI (https://github.com/whyt-byte) and pkmer.cn (https://pkmer.cn).
+*/
+
+@import url("blue-topaz/blue-topaz-base.css");
+
+:root {
+  --bt-number-headings: none;
+  --bt-h2-number: none;
+  --bt-h3-number: none;
+  --bt-h4-number: none;
+  --bt-bg: #ffffff;
+  --bt-bg-alt: #e9e9e9;
+  --bt-surface: #fcfcfc;
+  --bt-surface-alt: #f3f3f3;
+  --bt-text: #0e0e0e;
+  --bt-muted: #767676;
+  --bt-border: #dddddd;
+  --bt-accent-rgb: 70, 142, 235;
+  --bt-accent: #468eeb;
+  --bt-accent-hover: #237add;
+  --bt-strong: #F25F5F;
+  --bt-em: #519A00;
+  --bt-strong-em: #B166EC;
+  --bt-h1: hsl(216, 88%, 26%);
+  --bt-h2: hsl(212, 100%, 33%);
+  --bt-h3: hsl(210, 86%, 39%);
+  --bt-h4: hsl(208, 58%, 49%);
+  --bt-h5: hsl(209, 70%, 62%);
+  --bt-h6: hsl(209, 65%, 72%);
+  --bt-code-bg: #e6e6e671;
+  --bt-code-text: #e95d00;
+  --bt-code-border: #468eeb24;
+  --bt-code-block-bg: #f6f8fb;
+  --bt-code-block-text: #26323f;
+  --bt-quote-bg: #468eeb14;
+  --bt-quote-border: #468eeb;
+  --bt-green-note-bg: #79c95512;
+  --bt-green-note-border: #2f7f2e;
+  --bt-mark-bg: #ffdd5752;
+  --bt-mark-text: #2d2d2d;
+  --bt-checkbox-border: #b8c2d0;
+  --bt-checkbox-check: #ffffff;
+  --bt-table-border: #468eeb42;
+  --bt-table-head: #468eeb18;
+  --bt-table-stripe: #468eeb0c;
+  --bt-alert-bg: #468eeb14;
+  --bt-alert-border: #468eeb;
+  --bt-alert-title: #2e6fbd;
+  --bt-alert-tip-bg: #79c95512;
+  --bt-alert-tip-border: #2f7f2e;
+  --bt-alert-warn-bg: #f25f5f14;
+  --bt-alert-warn-border: #F25F5F;
+}
