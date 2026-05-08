@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blue Topaz Typora Theme Preview</title>
+    <link rel="stylesheet" href="blue-topaz-preview.css">
+  </head>
+  <body>
+    <main class="preview-shell">
+      <header class="preview-header">
+        <div>
+          <h1 class="preview-title">Blue Topaz Typora Theme Preview</h1>
+          <p class="preview-note">
+            Four isolated iframe panes render the same Typora-like document while loading separate theme entrypoints.
+            The shell styles only this comparison page; theme content styling comes from the linked theme CSS files.
+          </p>
+        </div>
+        <div class="preview-actions">
+          <button class="preview-button" type="button" data-refresh>Refresh panes</button>
+        </div>
+      </header>
+
+      <section class="preview-grid" aria-label="Theme comparison panes">
+        <article class="preview-pane">
+          <div class="preview-pane-header">
+            <h2 class="preview-pane-title">Light numbered</h2>
+            <span class="preview-pane-file">blue-topaz.css</span>
+          </div>
+          <iframe class="preview-frame" title="Light numbered Blue Topaz preview" data-theme="../blue-topaz.css"></iframe>
+        </article>
+
+        <article class="preview-pane">
+          <div class="preview-pane-header">
+            <h2 class="preview-pane-title">Light non-numbered</h2>
+            <span class="preview-pane-file">blue-topaz-nonum.css</span>
+          </div>
+          <iframe class="preview-frame" title="Light non-numbered Blue Topaz preview" data-theme="../blue-topaz-nonum.css"></iframe>
+        </article>
+
+        <article class="preview-pane">
+          <div class="preview-pane-header">
+            <h2 class="preview-pane-title">Dark numbered</h2>
+            <span class="preview-pane-file">blue-topaz-dark.css</span>
+          </div>
+          <iframe class="preview-frame" title="Dark numbered Blue Topaz preview" data-theme="../blue-topaz-dark.css"></iframe>
+        </article>
+
+        <article class="preview-pane">
+          <div class="preview-pane-header">
+            <h2 class="preview-pane-title">Dark non-numbered</h2>
+            <span class="preview-pane-file">blue-topaz-dark-nonum.css</span>
+          </div>
+          <iframe class="preview-frame" title="Dark non-numbered Blue Topaz preview" data-theme="../blue-topaz-dark-nonum.css"></iframe>
+        </article>
+      </section>
+    </main>
+
+    <template id="sample-document">
+      <div id="write" class="typora-export">
+        <pre class="md-meta-block">title: Blue Topaz verification sample
+author: Theme QA
+tags: [typora, blue-topaz, preview]
+updated: 2026-05-08</pre>
+
+        <h1 id="top">Blue Topaz document sample</h1>
+        <p>
+          This paragraph checks normal body text, a <a href="#links">local link</a>, <strong>bold text</strong>,
+          <em>italic text</em>, <strong><em>bold italic text</em></strong>, <mark>marked text</mark>,
+          and <del>deleted text</del>. It also includes <code>inline_code()</code> beside ordinary prose.
+        </p>
+
+        <h2>Heading level two</h2>
+        <p>
+          Blue Topaz should feel compact and readable without crowding long notes. The numbered variants should
+          generate counters for this heading level while the non-numbered variants should stay clean.
+        </p>
+
+        <h3>Heading level three</h3>
+        <ul>
+          <li>Unordered list item with enough text to wrap naturally in the writing column.</li>
+          <li>Nested structure check
+            <ul>
+              <li>Secondary unordered item.</li>
+              <li>Another secondary item with <a href="#table">a table reference</a>.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h4>Heading level four</h4>
+        <ol>
+          <li>Ordered list item.</li>
+          <li>Second ordered item with nested details.
+            <ol>
+              <li>Nested ordered item.</li>
+              <li>Another nested item.</li>
+            </ol>
+          </li>
+        </ol>
+
+        <h5>Heading level five</h5>
+        <ul class="contains-task-list">
+          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" checked> Completed task item.</li>
+          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> Open task item.</li>
+          <li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox"> Longer task item that wraps across a line.</li>
+        </ul>
+
+        <h6>Heading level six</h6>
+        <blockquote>
+          <p>Blockquotes should show the accent bar, readable contrast, and comfortable paragraph spacing.</p>
+          <blockquote>
+            <p>Nested quote for border and surface checks.</p>
+          </blockquote>
+        </blockquote>
+
+        <hr>
+
+        <h2 id="table">Tables and code</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Expected signal</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Headings</td>
+              <td>Palette ladder and counters where enabled</td>
+              <td>Inspect visually</td>
+            </tr>
+            <tr>
+              <td>Emphasis</td>
+              <td>Custom bold, italic, and bold italic colors</td>
+              <td>Inspect visually</td>
+            </tr>
+            <tr>
+              <td>Blocks</td>
+              <td>Soft surfaces with restrained borders</td>
+              <td>Inspect visually</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>The next block uses Typora-like fenced-code markup with CodeMirror-ish spans.</p>
+        <pre class="md-fences md-end-block cm-s-inner" lang="css"><code><span class="cm-comment">/* fenced code sample */</span>
+<span class="cm-qualifier">#write</span> <span class="cm-tag">h2</span> {
+  <span class="cm-property">color</span>: <span class="cm-variable">var</span>(<span class="cm-string">--bt-h2</span>);
+  <span class="cm-property">line-height</span>: <span class="cm-number">1.5</span>;
+}</code></pre>
+
+        <h2>Image and footnote-like text</h2>
+        <figure>
+          <svg role="img" aria-labelledby="sample-image-title" viewBox="0 0 720 260" xmlns="http://www.w3.org/2000/svg">
+            <title id="sample-image-title">Diagram stand-in</title>
+            <rect width="720" height="260" rx="18" fill="#d9e8f9"></rect>
+            <rect x="48" y="50" width="190" height="92" rx="12" fill="#468eeb"></rect>
+            <rect x="264" y="50" width="190" height="92" rx="12" fill="#67b56b"></rect>
+            <rect x="480" y="50" width="190" height="92" rx="12" fill="#b166ec"></rect>
+            <path d="M238 96h26M454 96h26" stroke="#253244" stroke-width="8" stroke-linecap="round"></path>
+            <text x="360" y="199" fill="#253244" text-anchor="middle" font-family="Arial, sans-serif" font-size="28">Embedded image area</text>
+          </svg>
+          <figcaption>Figure caption text for image spacing checks.</figcaption>
+        </figure>
+        <p class="footnotes">
+          <sup id="fnref1">1</sup> Footnote-like text checks muted colors, small text, links back to
+          <a href="#top">the document start</a>, and dense prose wrapping.
+        </p>
+
+        <h2>Alerts</h2>
+        <div class="md-alert md-alert-note">
+          <p class="md-alert-title">Note</p>
+          <p>Notes should read as useful callout blocks while staying compatible with Typora alert selectors.</p>
+        </div>
+        <div class="md-alert md-alert-tip">
+          <p class="md-alert-title">Tip</p>
+          <p>Tip content checks green-ish accent handling and paragraph spacing.</p>
+        </div>
+        <div class="md-alert md-alert-important">
+          <p class="md-alert-title">Important</p>
+          <p>Important content checks stronger accent treatment.</p>
+        </div>
+        <div class="md-alert md-alert-warning">
+          <p class="md-alert-title">Warning</p>
+          <p>Warning content should remain legible in light and dark variants.</p>
+        </div>
+        <div class="md-alert md-alert-caution">
+          <p class="md-alert-title">Caution</p>
+          <p>Caution content checks warm border and background contrast.</p>
+        </div>
+      </div>
+    </template>
+
+    <script>
+      const sampleDocument = document.querySelector("#sample-document").innerHTML.trim();
+      const frames = [...document.querySelectorAll(".preview-frame")];
+
+      function frameSource(themePath) {
+        return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${themePath}">
+  </head>
+  <body>
+${sampleDocument}
+  </body>
+</html>`;
+      }
+
+      function refreshFrames() {
+        frames.forEach((frame) => {
+          frame.srcdoc = frameSource(frame.dataset.theme);
+        });
+      }
+
+      document.querySelector("[data-refresh]").addEventListener("click", refreshFrames);
+      refreshFrames();
+    </script>
+  </body>
+</html>
