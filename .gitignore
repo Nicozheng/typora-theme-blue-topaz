@@ -4,6 +4,7 @@ Thumbs.db
 # Local editor and OS noise
 .idea/
 .vscode/
+docs/
 *.swp
 *.swo
 
