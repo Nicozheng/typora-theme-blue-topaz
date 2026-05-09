@@ -3,22 +3,6 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
 */
 
 @font-face {
-  font-family: "Bookerly";
-  src: url("Bookerly-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PingFang SC";
-  src: url("PingFangSC-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Cascadia Code";
   src: url("CascadiaCode.woff2") format("woff2");
   font-weight: 400;

@@ -21,7 +21,7 @@ Reference sources:
 
 User customization to apply to all four themes:
 
-- Main, bold, and italic text use the Bookerly-first font stack from `style-settings.json`.
+- Main, bold, and italic text use the Bookerly-first font stack from `style-settings.json`, with Bookerly and PingFang SC referenced as local/system fonts only in the public package.
 - Main line height is `1.5`.
 - Bold color is `#F25F5F`.
 - Italic color is `#519A00`.
@@ -53,7 +53,7 @@ The implementation should avoid duplicating the entire CSS four times. Use:
 
 - A shared base file for fonts, layout, Markdown element styling, and Typora UI selectors.
 - Small variant files that import the base and set palette plus heading-number behavior.
-- A font asset directory copied from `example_theme/blueTex`.
+- A font asset directory with redistributable code fonts copied from `example_theme/blueTex`.
 
 Expected public theme files:
 
@@ -64,8 +64,6 @@ Expected public theme files:
 
 Expected support assets:
 
-- `blue-topaz/Bookerly-Regular.ttf`
-- `blue-topaz/PingFangSC-Regular.otf`
 - `blue-topaz/CascadiaCode.woff2`
 - `blue-topaz/MapleMono-NF-CN-Regular.woff2`
 - `blue-topaz/blue-topaz-base.css`

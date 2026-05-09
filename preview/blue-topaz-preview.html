@@ -145,16 +145,15 @@ updated: 2026-05-08</pre>
 
         <p>The next block uses Typora-like fenced-code markup with CodeMirror-ish spans.</p>
         <pre class="md-fences md-end-block cm-s-inner" lang="shell"><code><span class="CodeMirror-linenumber">1</span> <span class="cm-keyword">mkdir</span> <span class="cm-operator">-p</span> blue-topaz
-<span class="CodeMirror-linenumber">2</span> <span class="cm-keyword">cp</span> example_theme/blueTex/Bookerly-Regular.ttf blue-topaz/Bookerly-Regular.ttf
-<span class="CodeMirror-linenumber">3</span> <span class="cm-keyword">cp</span> example_theme/blueTex/PingFangSC-Regular.otf blue-topaz/PingFangSC-Regular.otf
-<span class="CodeMirror-linenumber">4</span> <span class="cm-keyword">cp</span> example_theme/blueTex/CascadiaCode.woff2 blue-topaz/CascadiaCode.woff2
-<span class="CodeMirror-linenumber">5</span> <span class="cm-keyword">cp</span> example_theme/blueTex/MapleMono-NF-CN-Regular.woff2 blue-topaz/MapleMono-NF-CN-Regular.woff2</code></pre>
+<span class="CodeMirror-linenumber">2</span> <span class="cm-keyword">cp</span> fonts/CascadiaCode.woff2 blue-topaz/CascadiaCode.woff2
+<span class="CodeMirror-linenumber">3</span> <span class="cm-keyword">cp</span> fonts/MapleMono-NF-CN-Regular.woff2 blue-topaz/MapleMono-NF-CN-Regular.woff2
+<span class="CodeMirror-linenumber">4</span> <span class="cm-comment"># Bookerly and PingFang SC are referenced as local fonts only.</span></code></pre>
 
         <p>This CSS sample checks at-rules, properties, strings, and functions in dark code blocks.</p>
         <pre class="md-fences md-end-block cm-s-inner" lang="css"><code><span class="CodeMirror-linenumber">1</span> <span class="cm-comment">/* font asset registration */</span>
 <span class="CodeMirror-linenumber">2</span> <span class="cm-keyword">@font-face</span> <span class="cm-bracket">{</span>
-<span class="CodeMirror-linenumber">3</span>   <span class="cm-property">font-family</span><span class="cm-punctuation">:</span> <span class="cm-string">"Bookerly"</span><span class="cm-punctuation">;</span>
-<span class="CodeMirror-linenumber">4</span>   <span class="cm-property">src</span><span class="cm-punctuation">:</span> <span class="cm-variable">url</span><span class="cm-bracket">(</span><span class="cm-string">"Bookerly-Regular.ttf"</span><span class="cm-bracket">)</span><span class="cm-punctuation">;</span>
+<span class="CodeMirror-linenumber">3</span>   <span class="cm-property">font-family</span><span class="cm-punctuation">:</span> <span class="cm-string">"Cascadia Code"</span><span class="cm-punctuation">;</span>
+<span class="CodeMirror-linenumber">4</span>   <span class="cm-property">src</span><span class="cm-punctuation">:</span> <span class="cm-variable">url</span><span class="cm-bracket">(</span><span class="cm-string">"CascadiaCode.woff2"</span><span class="cm-bracket">)</span><span class="cm-punctuation">;</span>
 <span class="CodeMirror-linenumber">5</span> <span class="cm-bracket">}</span></code></pre>
 
         <h2>Image and footnote-like text</h2>

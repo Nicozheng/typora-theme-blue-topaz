@@ -17,15 +17,13 @@
 - Create `blue-topaz-nonum.css`: light non-numbered public Typora theme entrypoint.
 - Create `blue-topaz-dark.css`: dark numbered public Typora theme entrypoint.
 - Create `blue-topaz-dark-nonum.css`: dark non-numbered public Typora theme entrypoint.
-- Copy font assets from `resources/example_theme/blueTex/` into `blue-topaz/`.
+- Copy redistributable code font assets from `resources/example_theme/blueTex/` into `blue-topaz/`.
 - Create `preview/blue-topaz-preview.html`: static verification page with four render panes.
 - Create `preview/blue-topaz-preview.css`: preview-only layout CSS that imports the four theme files into scoped panes.
 
 ## Task 1: Create Theme Assets
 
 **Files:**
-- Create: `blue-topaz/Bookerly-Regular.ttf`
-- Create: `blue-topaz/PingFangSC-Regular.otf`
 - Create: `blue-topaz/CascadiaCode.woff2`
 - Create: `blue-topaz/MapleMono-NF-CN-Regular.woff2`
 
@@ -35,34 +33,32 @@ Run:
 
 ```bash
 mkdir -p blue-topaz
-cp resources/example_theme/blueTex/Bookerly-Regular.ttf blue-topaz/Bookerly-Regular.ttf
-cp resources/example_theme/blueTex/PingFangSC-Regular.otf blue-topaz/PingFangSC-Regular.otf
 cp resources/example_theme/blueTex/CascadiaCode.woff2 blue-topaz/CascadiaCode.woff2
 cp resources/example_theme/blueTex/MapleMono-NF-CN-Regular.woff2 blue-topaz/MapleMono-NF-CN-Regular.woff2
 ```
 
-Expected: the four files exist under `blue-topaz/`.
+Expected: the two redistributable code font files exist under `blue-topaz/`. Bookerly and PingFang SC are referenced as local/system fonts only in the public package.
 
 - [ ] **Step 2: Verify copied assets**
 
 Run:
 
 ```bash
-ls -lh blue-topaz/Bookerly-Regular.ttf blue-topaz/PingFangSC-Regular.otf blue-topaz/CascadiaCode.woff2 blue-topaz/MapleMono-NF-CN-Regular.woff2
+ls -lh blue-topaz/CascadiaCode.woff2 blue-topaz/MapleMono-NF-CN-Regular.woff2
 ```
 
-Expected: all four font files are listed with non-zero sizes.
+Expected: both code font files are listed with non-zero sizes.
 
 - [ ] **Step 3: Commit assets**
 
 Run:
 
 ```bash
-git add blue-topaz/Bookerly-Regular.ttf blue-topaz/PingFangSC-Regular.otf blue-topaz/CascadiaCode.woff2 blue-topaz/MapleMono-NF-CN-Regular.woff2
+git add blue-topaz/CascadiaCode.woff2 blue-topaz/MapleMono-NF-CN-Regular.woff2
 git commit -m "Add Blue Topaz Typora font assets"
 ```
 
-Expected: a commit containing only the copied font assets.
+Expected: a commit containing only the redistributable copied font assets.
 
 ## Task 2: Build Shared Typora Base CSS
 
@@ -77,16 +73,6 @@ Write `blue-topaz/blue-topaz-base.css` with:
 /*
 Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/PKM-er/Blue-Topaz_Obsidian-css), and I would like to express my appreciation to WhyI (https://github.com/whyt-byte) and pkmer.cn (https://pkmer.cn).
 */
-
-@font-face {
-  font-family: "Bookerly";
-  src: url("Bookerly-Regular.ttf");
-}
-
-@font-face {
-  font-family: "PingFang SC";
-  src: url("PingFangSC-Regular.otf");
-}
 
 @font-face {
   font-family: "Cascadia Code";
