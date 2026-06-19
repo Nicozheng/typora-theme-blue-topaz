@@ -270,10 +270,22 @@ li > ol {
 
 .md-task-list-item {
   list-style-type: none;
+  position: relative;
 }
 
-.md-task-list-item > input {
-  margin-left: -1.35rem;
+/* Anchor the checkbox in the left gutter so it stays on the first text line
+   whether Typora renders the item as direct text (tight list) or wraps it in
+   a block <p> (loose list). Without absolute positioning the inline checkbox
+   is pushed onto its own line by the following block <p>. */
+#write .md-task-list-item > input[type="checkbox"] {
+  position: absolute;
+  left: -1.35rem;
+  top: 0.28rem;
+  margin: 0;
+}
+
+.md-task-list-item > p {
+  margin: 0;
 }
 
 #write input[type="checkbox"] {
