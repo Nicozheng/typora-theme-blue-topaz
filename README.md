@@ -42,7 +42,25 @@ This uses Typora's native alert syntax, not Quarto's `::: {.callout-note}` fence
 
 ## Preview
 
-Open `preview/blue-topaz-preview.html` in a browser or serve the repository locally and visit:
+The same sample document rendered under each theme. The `*-nonum` variants are identical except they drop the generated heading numbers.
+
+### Blue Topaz — light (`blue-topaz.css`)
+
+![Blue Topaz light preview](preview/blue-topaz-preview.png)
+
+### Blue Topaz — dark (`blue-topaz-dark.css`)
+
+![Blue Topaz dark preview](preview/blue-topaz-dark-preview.png)
+
+### Navy Gold (`navy-gold.css`)
+
+Emory navy + gold accents, GitHub-Dark code blocks, no heading numbers.
+
+![Navy Gold preview](preview/navy-gold-preview.png)
+
+### Interactive comparison
+
+For a live side-by-side of all four Blue Topaz variants, open `preview/blue-topaz-preview.html` in a browser, or serve the repository locally:
 
 ```sh
 python3 -m http.server 8765
