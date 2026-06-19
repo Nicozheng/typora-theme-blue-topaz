@@ -62,3 +62,14 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
   --bt-alert-warn-bg: #f25f5f17;
   --bt-alert-warn-border: #F25F5F;
 }
+
+#typora-sidebar,
+.file-list-item,
+.file-tree,
+.file-node-content,
+.file-node-title,
+.file-library-node,
+.outline-item,
+.outline-title {
+  color: #e6e6e6;
+}

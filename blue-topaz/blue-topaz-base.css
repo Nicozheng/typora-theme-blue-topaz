@@ -44,6 +44,20 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
   --bt-code-shell-option: var(--bt-code-property);
   --bt-code-variable: var(--bt-code-block-text);
   --bt-code-function: var(--bt-code-property);
+  /* Callouts (GitHub-style alerts). Universal defaults that read on both
+     light and dark backgrounds; individual themes may override them. */
+  --bt-callout-note-accent: #4a7fc1;
+  --bt-callout-note-bg: #4a7fc11f;
+  --bt-callout-note-line: #4a7fc159;
+  --bt-callout-tip-accent: #4f9e54;
+  --bt-callout-tip-bg: #4f9e541f;
+  --bt-callout-tip-line: #4f9e5459;
+  --bt-callout-important-accent: #9a6ce6;
+  --bt-callout-important-bg: #9a6ce61f;
+  --bt-callout-important-line: #9a6ce659;
+  --bt-callout-warn-accent: #e25b52;
+  --bt-callout-warn-bg: #e25b521f;
+  --bt-callout-warn-line: #e25b5259;
 }
 
 html,
@@ -549,9 +563,10 @@ pre.md-meta-block {
 
 .md-alert {
   margin: 1rem 0;
-  padding: 0.8rem 1rem;
+  padding: 0.7rem 0.95rem;
+  border: 1px solid var(--bt-border);
   border-left: 4px solid var(--bt-alert-border);
-  border-radius: 0 var(--bt-radius-m) var(--bt-radius-m) 0;
+  border-radius: var(--bt-radius-m);
   background: var(--bt-alert-bg);
 }
 
@@ -560,26 +575,51 @@ pre.md-meta-block {
 }
 
 .md-alert-note {
-  border-left-color: var(--bt-green-note-border);
-  background: var(--bt-green-note-bg);
+  border-color: var(--bt-callout-note-line);
+  border-left-color: var(--bt-callout-note-accent);
+  background: var(--bt-callout-note-bg);
 }
 
 .md-alert-tip {
-  border-left-color: var(--bt-alert-tip-border);
-  background: var(--bt-alert-tip-bg);
+  border-color: var(--bt-callout-tip-line);
+  border-left-color: var(--bt-callout-tip-accent);
+  background: var(--bt-callout-tip-bg);
 }
 
-.md-alert-important,
+.md-alert-important {
+  border-color: var(--bt-callout-important-line);
+  border-left-color: var(--bt-callout-important-accent);
+  background: var(--bt-callout-important-bg);
+}
+
 .md-alert-warning,
 .md-alert-caution {
-  border-left-color: var(--bt-alert-warn-border);
-  background: var(--bt-alert-warn-bg);
+  border-color: var(--bt-callout-warn-line);
+  border-left-color: var(--bt-callout-warn-accent);
+  background: var(--bt-callout-warn-bg);
 }
 
 .md-alert-title {
   margin-bottom: 0.35rem;
   color: var(--bt-alert-title);
   font-weight: 700;
+}
+
+.md-alert-note .md-alert-title {
+  color: var(--bt-callout-note-accent);
+}
+
+.md-alert-tip .md-alert-title {
+  color: var(--bt-callout-tip-accent);
+}
+
+.md-alert-important .md-alert-title {
+  color: var(--bt-callout-important-accent);
+}
+
+.md-alert-warning .md-alert-title,
+.md-alert-caution .md-alert-title {
+  color: var(--bt-callout-warn-accent);
 }
 
 ::selection {

@@ -1,0 +1,116 @@
+/*
+Navy Gold — a light Typora theme.
+Palette and typography adapted from Pedro H. C. Sant'Anna's Quarto site
+(https://psantanna.com/), built on the Emory University colours:
+navy #012169 + gold #b9975b, with GitHub-Dark code blocks.
+
+Structural rules are reused from Blue Topaz (https://github.com/PKM-er/Blue-Topaz_Obsidian-css);
+thanks to WhyI (https://github.com/whyt-byte) and pkmer.cn (https://pkmer.cn).
+*/
+
+@import url("blue-topaz/blue-topaz-base.css");
+
+:root {
+  /* No heading numbers — matches the source page */
+  --bt-number-headings: none;
+  --bt-h2-number: none;
+  --bt-h3-number: none;
+  --bt-h4-number: none;
+
+  /* Fonts — Source Sans Pro body + system monospace, as on psantanna.com */
+  --bt-font-text: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "LXGW WenKai Screen", "PingFang SC", "Microsoft YaHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --bt-font-code: "SF Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Surfaces — white page, warm cream panels */
+  --bt-bg: #ffffff;
+  --bt-bg-alt: #f1ede4;
+  --bt-surface: #faf6ef;
+  --bt-surface-alt: #f3eee3;
+  --bt-text: #222222;
+  --bt-muted: #5f5f5f;
+  --bt-border: #e4ddcd;
+
+  /* Accent — Emory navy links, bright-blue hover */
+  --bt-accent-rgb: 1, 33, 105;
+  --bt-accent: #012169;
+  --bt-accent-hover: #2780e3;
+
+  --bt-strong: #012169;
+  --bt-em: #8b6914;
+  --bt-strong-em: #6d4f0f;
+
+  /* Headings — navy deepening into the page's primary blue */
+  --bt-h1: hsl(216, 98%, 21%);
+  --bt-h2: hsl(216, 95%, 24%);
+  --bt-h3: hsl(215, 88%, 30%);
+  --bt-h4: hsl(214, 82%, 38%);
+  --bt-h5: hsl(212, 78%, 46%);
+  --bt-h6: hsl(211, 76%, 53%);
+
+  /* Inline code — gold text on a faint gold tint */
+  --bt-code-bg: #b9975b1f;
+  --bt-code-text: #8b6914;
+  --bt-code-border: #b9975b40;
+
+  /* Code blocks — GitHub Dark */
+  --bt-code-block-bg: #24292e;
+  --bt-code-block-text: #e1e4e8;
+  --bt-code-line-number: #6a737d;
+  --bt-code-comment: #6a737d;
+  --bt-code-keyword: #f97583;
+  --bt-code-string: #9ecbff;
+  --bt-code-number: #79b8ff;
+  --bt-code-property: #79b8ff;
+  --bt-code-tag: #85e89d;
+  --bt-code-operator: #e1e4e8;
+  --bt-code-punctuation: #e1e4e8;
+  --bt-code-meta: #f97583;
+  --bt-code-shell-option: #ffab70;
+  --bt-code-variable: #ffab70;
+  --bt-code-function: #b392f0;
+
+  /* Blockquote — cream with a gold rule (page style) */
+  --bt-quote-bg: #faf6ef;
+  --bt-quote-border: #b9975b;
+
+  --bt-green-note-bg: #79c95512;
+  --bt-green-note-border: #2f7f2e;
+
+  --bt-mark-bg: #b9975b3b;
+  --bt-mark-text: #2d2d2d;
+
+  --bt-checkbox-border: #c2b79a;
+  --bt-checkbox-check: #ffffff;
+
+  /* Tables — navy tint */
+  --bt-table-border: #01216933;
+  --bt-table-head: #0121690f;
+  --bt-table-stripe: #01216908;
+
+  /* Callouts — page-matched palette: note=blue, tip=green, important=navy, warning=red */
+  --bt-alert-bg: #0121690d;
+  --bt-alert-border: #012169;
+  --bt-alert-title: #012169;
+  --bt-alert-tip-bg: #79c95512;
+  --bt-alert-tip-border: #2f7f2e;
+  --bt-alert-warn-bg: #f25f5f14;
+  --bt-alert-warn-border: #F25F5F;
+  --bt-callout-note-accent: #3f6fb5;
+  --bt-callout-note-bg: #f4f7fd;
+  --bt-callout-note-line: #c7d6f0;
+  --bt-callout-tip-accent: #4f9e54;
+  --bt-callout-tip-bg: #f1f8ef;
+  --bt-callout-tip-line: #cfe6c8;
+  --bt-callout-important-accent: #012169;
+  --bt-callout-important-bg: #f3f5fb;
+  --bt-callout-important-line: #c3cee3;
+  --bt-callout-warn-accent: #d6443c;
+  --bt-callout-warn-bg: #fdf4f3;
+  --bt-callout-warn-line: #f1c9c6;
+}
+
+/* Italic, muted blockquote text to mirror psantanna.com */
+#write blockquote {
+  font-style: italic;
+  color: #555555;
+}
